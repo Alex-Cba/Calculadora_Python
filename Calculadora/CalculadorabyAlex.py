@@ -1,6 +1,3 @@
-#Haciendo una calculadora
-#Lambda sirve para que sea funcion anonimas, es decir que no guarda lo que coloco en las variables de forma automatica, porque python cuando le doy un valor a una variable python lo va aguardar
-
 from tkinter import *
 
 raiz=Tk()
@@ -12,15 +9,13 @@ indice=0
 
 #-------------------------------------Pantalla----------------------
 
-#numeroPantalla=StringVar() #<-pasa todo como cadena de caracteres no sirve para el eval
-
 pantalla=Entry(miFrame)
-pantalla.grid(row=1, column=1, padx=10, pady=10, columnspan=4) #Le digo al widgeth de la pantalla que se expanda en 4 por que la calculadora en su primera fila tiene 4 columnas
+pantalla.grid(row=1, column=1, padx=10, pady=10, columnspan=4) #widgeth de la pantalla que se expanda en 4 por que la calculadora en su primera fila tiene 4 columnas
 pantalla.config(background="black", fg="#03f943", justify="left")
 
 #----------------------Codigo de botones----------------------
 
-def numeropulsado(num): #Esto va a servir para que cuando la persona pulse el boton le llegue de esa pulsacion el parametro a la def, entonces no tengo que hacer 50 def para cada boton, sino que le paso el numero desde el boton, entonces con al funcion get lo va sumando, pero da un error que se soluciona con lambda
+def numeropulsado(num):
     global indice
 
     pantalla.insert(indice,num)
